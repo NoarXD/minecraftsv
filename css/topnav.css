@@ -1,0 +1,74 @@
+.topnav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+    transition: .3s;
+    --b: 0.1em;
+    /* the thickness of the line */
+    --c: #1095c1;
+    /* the color */
+
+    color: #0000;
+    padding-block: var(--b);
+    background:
+        linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+}
+
+.topnav .nav-btn {
+    display: none;
+}
+
+.topnav .brand {
+    border-radius: 14PX;
+}
+
+.topnav>.nav-link>a:hover {
+    position: relative;
+    top: 5px;
+    --_p: 100%;
+    --_s: .2s;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav>.nav-link>a {
+        display: none;
+    }
+
+    .topnav.responsive .nav-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0px;
+    }
+
+    .topnav .nav-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+        display: block;
+    }
+
+    .topnav.responsive a {
+        display: block;
+    }
+}

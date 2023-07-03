@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    margin: auto;
+    padding: 100px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: auto;
+        padding: 20px;
+    }
+}
